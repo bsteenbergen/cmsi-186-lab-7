@@ -94,15 +94,15 @@ public class Maze {
         }
 
         boolean isInMaze() {
-            return row >= 0 && row <= getWidth() && column >= 0 && column <= getHeight();
+            return row >= 0 && row <= getWidth() && column >= 0 && column <= getHeight() && !contents().equals(0);
         }
 
         boolean canBeMovedTo() {
-            return isInMaze() && (cells[row][column].equals(Cell.OPEN) || cells[row][column].equals(Cell.CHEESE));
+            return isInMaze() && (contents().equals(Cell.OPEN) || contents().equals(Cell.CHEESE));
         }
 
         boolean hasCheese() {
-            return isInMaze() && cells[row][column].equals(Cell.CHEESE);
+            return isInMaze() && contents().equals(Cell.CHEESE);
         }
 
         Location above() {
