@@ -94,7 +94,7 @@ public class Maze {
         }
 
         boolean isInMaze() {
-            return row >= 0 && row <= getWidth() && column >= 0 && column <= getHeight() && !contents().equals(0);
+            return row >= 0 && row < getHeight() && column >= 0 && column < getWidth();
         }
 
         boolean canBeMovedTo() {
