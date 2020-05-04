@@ -19,9 +19,7 @@ public class BacktrackingMazeSolver {
 
             if (current.isAt(end)) {
                 return true;
-            }
-
-            if (current.above().canBeMovedTo()) {
+            } if (current.above().canBeMovedTo()) {
                 path.push(current);
                 current.place(Maze.Cell.PATH);
                 current = current.above();
