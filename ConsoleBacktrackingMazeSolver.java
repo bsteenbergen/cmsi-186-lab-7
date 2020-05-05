@@ -1,11 +1,5 @@
 import java.util.Scanner;
 
-/**
- * Animates a backtracking maze solver. If no command line arguments are given, the
- * maze description is read from standard input. If a single command line argument
- * is given, it is assumed to be a file name and program will attempt to read the
- * maze description from that file.
- */
 public class ConsoleBacktrackingMazeSolver {
 
     private static String CLEAR_SCREEN = "\u001B[2J";
